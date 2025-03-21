@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asynchroniczność - callbacks</title>
+  </head>
+  <body>
+    <div id="container"></div>
+    <button id="clearInterval">Wyłącz interval</button>
+    <script>
+      console.log(1)
+      const myBelovedFunction = () => {
+        console.log('My boy!')
+        setTimeout(myBelovedFunction, 500)
+      }
+      // const timeoutHandle = setTimeout(myBelovedFunction, 500)
+      myBelovedFunction()
+      const element = array[index]
+
+      const intervalHandle = setInterval(() => {
+        console.log('hi again')
+      }, 16.6)
+      const delayCodeExecution = (codeToExecute, delay) => {
+        setTimeout(codeToExecute, delay)
+      }
+      // delayCodeExecution(myBelovedFunction, 10_000)
+      console.log(2)
+
+      document.querySelector('#clearInterval').addEventListener('click', () => {
+        clearInterval(intervalHandle)
+      })
+    </script>
+  </body>
+</html>
